@@ -7,12 +7,6 @@ import com.google.inject.Inject;
 public class LocalAuthority {
     private List<String> actionsTaken;
 
-    // Закоментуємо конструктор
-    // public LocalAuthority(List<String> actionsTaken) {
-    //     this.actionsTaken = actionsTaken;
-    // }
-
-    // Додамо setter метод для впровадження залежності
     @Inject
     public void setActionsTaken(List<String> actionsTaken) {
         this.actionsTaken = actionsTaken;

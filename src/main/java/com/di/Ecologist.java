@@ -4,20 +4,13 @@ import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
 public class Ecologist {
-    private String name;
+    private final String name;
     private Sensor sensor;
 
-    // Закоментуємо конструктор
-    // @Inject
-    // public Ecologist(@Named("Ecologist Name") String name, Sensor sensor) {
-    //     this.name = name;
-    //     this.sensor = sensor;
-    // }
-
-    // Додаємо методи для впровадження залежностей
     @Inject
-    public void setName(@Named("Ecologist Name") String name) {
+    public Ecologist(@Named("Ecologist Name") String name, Sensor sensor) {
         this.name = name;
+        this.sensor = sensor;
     }
 
     @Inject

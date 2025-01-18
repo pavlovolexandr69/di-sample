@@ -1,7 +1,7 @@
 package com.di;
 
 public class SensorImpl implements Sensor {
-    private static final double POLLUTION_LEVEL = 35.0;  // фіксований рівень забруднення
+    private static final double POLLUTION_LEVEL = 35.0;  // Фіксований рівень забруднення
 
     @Override
     public void analyzeData() {
