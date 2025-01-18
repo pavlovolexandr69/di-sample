@@ -1,19 +1,19 @@
 package com.di;
 
-import java.util.List;
-
 import com.google.inject.Inject;
 
 public class LocalAuthority {
-    private List<String> actionsTaken;
+    private final DatabaseService databaseService;
 
     @Inject
-    public void setActionsTaken(List<String> actionsTaken) {
-        this.actionsTaken = actionsTaken;
+    public LocalAuthority(DatabaseService databaseService) {
+        this.databaseService = databaseService;
     }
 
-    public void takeAction(String report) {
-        actionsTaken.add(report);
-        System.out.println("Actions taken: " + actionsTaken);
+    public void takeAction(String location, double pollutionLevel) {
+        // Зберігаємо дані в базу
+        databaseService.savePollutionData(location, pollutionLevel);
+
+        System.out.println("Actions taken based on the pollution data at: " + location);
     }
 }

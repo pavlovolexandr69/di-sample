@@ -6,4 +6,5 @@ com\di\Ecologist.class
 com\di\Sensor.class
 com\di\Reportable.class
 com\di\AirSensor.class
+com\di\DatabaseService.class
 com\di\EcologistModule.class
